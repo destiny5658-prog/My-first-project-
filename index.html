@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <title>My first project</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="manifest" href="manifest.json">
+     <meta name="theme-color" content="#317EFB">
+   </head>
+   <body>
+     <h3 class="myh">DESTINY CALCULATOR</h3>
+     <div class="calculator">
+       <!-- calculate screen -->
+       <input type="text" class="calscreen" id="display" readonly>
+     
+       <!-- button row 1 -->
+       <div class="butcon">
+         <div class="mybut2">
+           <button onclick="clearDisplay();">C</button>
+         </div>
+         <div class="mybut2">
+           <button onclick="operator('/');">÷</button>
+         </div>
+         <div class="mybut2">
+           <button onclick="operator('*');">*</button>
+         </div>
+         <div class="mybut2">
+           <button  onclick="deleteLast();">Del</button>
+         </div>
+         </div>
+        
+         <!-- button row 2 -->
+         <div class="butcon">
+         <div  class="mybut">
+          <button onclick="appendToDisplay(7);">7</button>
+       </div>
+       <div class="mybut">
+          <button onclick="appendToDisplay(8);">8</button>
+       </div>
+       <div class="mybut">
+          <button onclick="appendToDisplay(9);">9</button>
+       </div>
+       <div class="mybut2">
+          <button  onclick="operator('+');">+</button>
+       </div>
+       </div>
+       
+          <!-- button row 3 -->
+         <div class="butcon">
+           <div class="mybut">
+          <button onclick="appendToDisplay(4);">4</button>
+       </div>
+       <div class="mybut">
+          <button onclick="appendToDisplay(5);">5</button>
+       </div>
+       <div class="mybut">
+          <button onclick="appendToDisplay(6);">6</button>
+       </div>
+       <div class="mybut2">
+          <button  onclick="operator('-');">-</button>
+       </div>
+       </div>
+       
+           <!-- button row 4 -->
+         <div class="butcon">
+           <div class="mybut">
+          <button onclick="appendToDisplay(1);">1</button>
+       </div>
+       <div class="mybut">
+          <button onclick="appendToDisplay(2);">2</button>
+       </div>
+       <div class="mybut">
+          <button onclick="appendToDisplay(3);">3</botton>
+       </div>
+       <div class="mybut2">
+          <button  onclick="appendToDisplay('.');">.</button>
+       </div>
+       </div> 
+       
+      <!-- button row 5 -->
+      <div class="butcon2">
+         <div class="mybut">
+          <button onclick="appendToDisplay(0);">0</button>
+       </div>
+       <div class="mybut2">
+          <button onclick="calculate();">=</button>
+       </div>
+       </div>
+      
+    </div>
+<script src="script.js"></script>
+<script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("service-worker.js")
+        .then(() => console.log("Service Worker registered"))
+        .catch((err) => console.log("Service Worker failed:", err));
+    }
+  </script>
+ </body>
+</html>
